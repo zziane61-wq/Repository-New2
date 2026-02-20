@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>منتدى احترافي</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">منتدى مونتدا</h1>
+      <nav class="nav-actions">
+        <button id="btn-register">تسجيل</button>
+        <button id="btn-login">دخول</button>
+        <button id="btn-logout" class="hidden">خروج</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <aside class="sidebar">
+      <div id="user-card" class="card">
+        <h3 id="user-name">زائر</h3>
+        <p id="user-status">لم تقم بتسجيل الدخول</p>
+      </div>
+      <div class="card info">
+        <h4>قواعد عامة</h4>
+        <ul>
+          <li>التزم بالأدب</li>
+          <li>لا سبام</li>
+          <li>احترم الآخرين</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="main">
+      <div class="card post-box" id="post-box">
+        <h2>أنشئ مشاركة جديدة</h2>
+        <textarea id="post-content" placeholder="اكتب هنا..." rows="4"></textarea>
+        <div class="actions">
+          <button id="btn-post">نشر</button>
+        </div>
+      </div>
+
+      <div id="feed"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <h3 id="modal-title">نموذج</h3>
+      <form id="auth-form">
+        <label>اسم المستخدم
+          <input id="username" required maxlength="30">
+        </label>
+        <label>كلمة المرور
+          <input id="password" type="password" required>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" id="modal-submit">موافق</button>
+          <button type="button" id="modal-cancel">إلغاء</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
